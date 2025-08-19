@@ -9,7 +9,7 @@ dotenv.config();
 const sequelize = new Sequelize(
   process.env.DB_NAME || 'dfet',
   process.env.DB_USER || 'dfet',
-  process.env.DB_PASS || 'dfetpass',
+  process.env.DB_PASS || 'dfet123',
   {
     host: process.env.DB_HOST || '127.0.0.1',
     port: Number(process.env.DB_PORT || 3306),
