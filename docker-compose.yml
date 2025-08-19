@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: dfet-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dfet
+      MYSQL_USER: dfet
+      MYSQL_PASSWORD: dfetpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    command: ["--default-authentication-plugin=mysql_native_password", "--sql_mode=STRICT_TRANS_TABLES"]
+volumes:
+  db_data:

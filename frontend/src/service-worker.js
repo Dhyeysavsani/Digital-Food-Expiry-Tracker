@@ -1,0 +1,1 @@
+// Service worker is served from /public/sw.js for push notifications.
